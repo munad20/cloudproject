@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=dev
+      - MONGO_DB_CONNECTION_STRING=mongodb+srv://muhamad:iDFgrBoeHz8IzAtL@clouddb.nqx7eab.mongodb.net/?retryWrites=true&w=majority
+      - MONGO_DB_NAME=clouddb
+      - REDIS_URI=default:nwkmFFWjPhTkfC5Wp9OdNiUwNlJcECqR@redis-10576.c124.us-central1-1.gce.cloud.redislabs.com:10576
+  
