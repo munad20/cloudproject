@@ -15,7 +15,7 @@ spec:
         app: sdu-evac-backend
     spec:
       containers:
-      - image: localhost:5001/sdu-evac-backend:v1.0.0
+      - image: europe-west1-docker.pkg.dev/odenseapp/odense-registry/sdu-evac-backend:v1.0.0
         name: sdu-evac-backend
         env:
         - name: PORT

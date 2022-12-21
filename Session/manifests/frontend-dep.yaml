@@ -15,5 +15,5 @@ spec:
         app: sdu-evac-frontend
     spec:
       containers:
-      - image: localhost:5001/sdu-evac-frontend:v0.1.0
+      - image: europe-west1-docker.pkg.dev/odenseapp/odense-registry/sdu-evac-backend:v1.0.0
         name: sdu-evac-frontend
